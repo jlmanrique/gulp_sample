@@ -16,7 +16,7 @@ gulp.task('scripts', ['clean'], function(){
 		pipe(gulp.dest('build/js'));
 });
 
-gulp.task('watch',function(){
+gulp.task('watch', ['scripts'], function(){
 
 	gulp.watch(['./src/*.js'], ['scripts']);
 });
